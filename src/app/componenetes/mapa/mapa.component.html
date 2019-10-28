@@ -10,7 +10,7 @@
       [longitude]="lng"
     >
       <agm-marker
-        *ngFor="let marcador of marcadores"
+        *ngFor="let marcador of marcadores; let i = index"
         [latitude]="marcador.lat"
         [longitude]="marcador.lng"
       >
@@ -22,7 +22,14 @@
 
           <div>
             <button mat-raised-button color="primary">Editar</button>
-            <button mat-raised-button color="warn">Borrar</button>
+            <button
+              (click)="borrarMarcador(i)"
+              class="borrar"
+              mat-raised-button
+              color="warn"
+            >
+              Borrar
+            </button>
           </div>
         </agm-info-window>
       </agm-marker>
