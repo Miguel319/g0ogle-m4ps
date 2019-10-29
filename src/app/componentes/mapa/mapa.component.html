@@ -21,7 +21,13 @@
           </p>
 
           <div>
-            <button mat-raised-button color="primary">Editar</button>
+            <button
+              (click)="editarMarcador(marcador)"
+              mat-raised-button
+              color="primary"
+            >
+              Editar
+            </button>
             <button
               (click)="borrarMarcador(i)"
               class="borrar"
